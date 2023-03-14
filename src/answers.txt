@@ -1,0 +1,87 @@
+CS 2200 Spring 2018
+Project 4
+
+Name: Hisham Kodvavi
+GT Username: hkodvavi3
+
+Problem 1B
+----------
+
+1 CPU:
+# of Context Switches: 99
+Total execution time: 67.6 s
+Total time spent in READY state: 389.9 s
+
+2 CPU:
+# of Context Switches: 113
+Total execution time: 35.8 s
+Total time spent in READY state: 83.1 s
+
+4 CPU:
+# of Context Switches: 182
+Total execution time: 33.4 s
+Total time spent in READY state: 0.6 s
+
+There is not a linear relationship between the number of CPUs and execution time. Although the execution time
+is halved going from 1 to 2 CPUs, execution time stays the same from 2 to 4. This is due to the fact that some
+CPUs will be sitting in the idle state if there are too many devoted to that process, so having more CPUs available
+isn't always advantageous.
+
+
+Problem 2B
+----------
+
+200 ms:
+# of Context Switches: 362
+Total execution time: 67.5 s
+Total time spent in READY state: 285.2 s
+
+400 ms:
+# of Context Switches: 202
+Total execution time: 67.6 s
+Total time spent in READY state: 299.0 s
+
+600 ms:
+# of Context Switches: 161
+Total execution time: 67.6 s
+Total time spent in READY state: 314.5 s
+
+800 ms:
+# of Context Switches: 136
+Total execution time: 67.6 s
+Total time spent in READY state: 325.4 s
+
+As the time slices become shorter, clearly the time spent in ready state decreases. However, this does not
+necessarily make shorter time slices the optimal route to go in a real OS. This is because of the context
+switches. As the time slices get smaller, there are more and more context switches. This takes time as well,
+and it can get to the point where the OS would spend more time making context switches than actually executing
+processes
+
+Problem 3B
+----------
+
+FIFO 1 CPU:
+# of Context Switches: 98
+Total execution time: 67.6 s
+Total time spent in READY state: 390.1 s
+
+Round Robin 1 CPU 200 ms:
+# of Context Switches: 362
+Total execution time: 67.5 s
+Total time spent in READY state: 285.2 s
+
+SRTF 1 CPU:
+# of Context Switches: 141
+Total execution time: 67.6 s
+Total time spent in READY state: 161.7 s
+
+In real life, it isn't possible to accurately calculate the amount of time a process will take to run, nor
+how long is actually left in a process. This is due to factors such as other threads, locks, and the fact
+that by the time something is calculated it won't be completely accurate. All these factors lead to SRTF
+remaining time to be approximated.
+
+With 1 CPU, SRTF had the lowest time spent in the ready queue. This is because the goal of SRTF is for
+processes to spend as little time waiting the queue as possible, especially if they are short. This prevents
+the convoy effect, where long processes hog the CPU. Because of this, a short process will not have to wait a 
+long period of time to execute. Because of that, the longest processes will execute last giving us a shorter
+amount of time spent in the ready queue.
