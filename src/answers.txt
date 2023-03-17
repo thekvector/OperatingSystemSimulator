@@ -1,11 +1,4 @@
-CS 2200 Spring 2018
-Project 4
 
-Name: Hisham Kodvavi
-GT Username: hkodvavi3
-
-Problem 1B
-----------
 
 1 CPU:
 # of Context Switches: 99
