@@ -1,6 +1,5 @@
 /*
  * os-sim.h
- * Multithreaded OS Simulation for CS 2200
  *
  * The simulator library.
  *
