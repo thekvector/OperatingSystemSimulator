@@ -1,6 +1,5 @@
 /*
  * student.c
- * Multithreaded OS Simulation for CS 2200
  *
  * This file contains the CPU scheduler for the simulation.
  */
