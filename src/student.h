@@ -1,6 +1,5 @@
 /*
  * student.h
- * Multithreaded OS Simulation for CS 2200
  *
  * YOU WILL NOT NEED TO MODIFY THIS FILE
  *
