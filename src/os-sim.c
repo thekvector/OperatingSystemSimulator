@@ -1,11 +1,5 @@
-/*
- * os-sim.c
- * Multithreaded OS Simulation for CS 2200
- *
- * The simulator internals.
- *
- * DO NOT MODIFY THIS FILE
- */
+
+//Multithreaded OS Simulation
 
 #include <assert.h>
 #include <pthread.h>
