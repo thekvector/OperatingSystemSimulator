@@ -1,6 +1,5 @@
 /*
  * process.c
- * Multithreaded OS Simulation for CS 2200
  *
  * This file contains process data for the simulator.
  */
